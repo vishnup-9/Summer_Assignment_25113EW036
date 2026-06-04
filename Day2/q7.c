@@ -1,23 +1,16 @@
-/* Q8 Write a program to Check whether a number is
-palindrome. */
+/* Q7 Write a program to Find product of digits */
 
 #include <stdio.h>
 
 int main(){
-    int n, rem, rev = 0, temp;
+    int n, rem, product = 1;
     printf("Enter number: ");
     scanf("%d",&n);
-    temp = n;
     while(n!=0){
-        rem= n%10;
-        rev = rem + rev*10;
+        rem = n%10;
+        product *= rem;
         n /= 10;
     }
-    if(rev==temp){
-        printf("Palindrome number!");
-    }
-    else{
-        printf("Not a Palindrome number!");
-    }
+    printf("The product of digits of the entered number is %d",product);
     return 0;
 }
